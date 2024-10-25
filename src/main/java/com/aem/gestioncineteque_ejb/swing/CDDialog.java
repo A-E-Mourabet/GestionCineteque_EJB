@@ -36,7 +36,7 @@ public class CDDialog extends JDialog {
 
         if (cdId != null) {
             // Load existing CD data for editing
-            CD existingCD = userOperations.findCD(cdId);
+            CD existingCD  = userOperations.findCD(cdId);
             titleField.setText(existingCD.getTitle());
             artistField.setText(existingCD.getArtist());
         }
