@@ -1,16 +1,22 @@
 package com.aem.gestioncineteque_ejb.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
+@Table(name = "cds")
 public class CD {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(name = "title", nullable = false)
     private String title;
+    @Column(name = "artist", nullable = false)
     private String artist;
+    @Column(name = "available", nullable = false)
     private boolean available;
+    @Column(name = "borrowedBy", nullable = false)
+
     private Long borrowedBy;
 
     // Getters and Setters
